@@ -19,4 +19,4 @@ kill(first, last, sendemail=Boolean)
 
 #woof.emailAllAssignments()
 
-#woof.kill("Sydney", "Jan", sendemail=True)
+#woof.kill("Evie", "Lagrandeur", sendemail=True)
