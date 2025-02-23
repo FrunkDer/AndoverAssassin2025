@@ -12,8 +12,9 @@ emailAllAssignments()
 kill(first, last, sendemail=Boolean)
 '''
 
-#woof.sendall('''A QUICK RULE CLARIFICATION
-#In putting the post-it on your target, your target must NOT BE AWARE OF THE POST IT. If you get a photo of them while they are trying to take it off, IT DOES NOT COUNT''')
+# woof.sendall('''We are officially in the top 12!! Everyone got reshuffled.
+# One more rule clarification: The sticky note should be stuck on a body part they can feel -- THIS MEANS NO BACKPACK STICKS!
+# Hoodies, coats, and jackets are all fair game. Remember: if your target is aware of you putting the sticky note on, it doesn't count.''')
 
 #woof.shuffle()
 
