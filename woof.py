@@ -6,11 +6,15 @@ outlook = win32com.client.Dispatch("Outlook.Application")
 
 def sendall(message):
     emailstr = ''
+    emaillist = []
     with open("killers.csv", mode='r', encoding='utf-8') as f:
         reader = csv.reader(f)
         for row in reader:
-            emailstr += f"{row[3]}; "
-        
+            emaillist.append(row[3])
+    random.shuffle(emaillist)
+    for email in emaillist:
+        emailstr += f"{email}; "
+    
 
     body = f'''Hey Assassins,
 {message}
