@@ -22,7 +22,7 @@ def sendall(message):
 Frank
     '''
     mail = outlook.CreateItem(0)
-    mail.To = emailstr
+    mail.BCC = emailstr
     mail.Subject = "Unfriendly Assassin Email"
     mail.Body = body
     mail.Send()

@@ -11,10 +11,10 @@ emailAllAssignments()
 
 kill(first, last, sendemail=Boolean)
 '''
-
-# woof.sendall('''We are officially in the top 12!! Everyone got reshuffled.
-# One more rule clarification: The sticky note should be stuck on a body part they can feel -- THIS MEANS NO BACKPACK STICKS!
-# Hoodies, coats, and jackets are all fair game. Remember: if your target is aware of you putting the sticky note on, it doesn't count.''')
+# message = '''WE ARE IN THE TOP 10! CONGRATULATIONS!
+# WE WILL NOW BE DOING REVIVALS! For now, breathe a sigh of relief for making it this far. I'm gonna hammer out the rules of how we do revivals with Anny and Char and I'll get back to you guys soon.
+# This means NO MORE KILLING FOR NOW'''
+# woof.sendall(message)
 
 #woof.shuffle()
 
