@@ -4,10 +4,10 @@ import random
 
 outlook = win32com.client.Dispatch("Outlook.Application")
 
-def sendall(message):
+def sendall(message, pth):
     emailstr = ''
     emaillist = []
-    with open("killers.csv", mode='r', encoding='utf-8') as f:
+    with open(pth, mode='r', encoding='utf-8') as f:
         reader = csv.reader(f)
         for row in reader:
             emaillist.append(row[3])
@@ -28,9 +28,9 @@ Frank
     mail.Send()
     print("Email Sent Successfully")
 
-def emailAssignment(first, last):
+def emailAssignment(first, last, pth):
     data = []
-    with open("killers.csv", mode="r", encoding="utf-8") as f:
+    with open(pth, mode="r", encoding="utf-8") as f:
         person = None
         reader = csv.reader(f)
         for row in reader:
@@ -66,10 +66,10 @@ def emailAssignment(first, last):
     mail.Send()
     print(f"Mail sent to {person[1]} {person[2]} successfully")
     
-def shuffle():
+def shuffle(pth):
     remainingids = []
     currentdata = []
-    with open("killers.csv", mode='r', encoding='utf-8') as f:
+    with open(pth, mode='r', encoding='utf-8') as f:
         reader = csv.reader(f)
         for row in reader:
             if not row:
@@ -85,14 +85,14 @@ def shuffle():
                 newdata.append(row)
                 newdata[i][4] = remainingids[i-1]
         
-    with open("killers.csv", mode="w", encoding="utf-8", newline='') as f:
+    with open(pth, mode="w", encoding="utf-8", newline='') as f:
         writer = csv.writer(f)
         writer.writerows(newdata)
     print("Successfully Shuffled Killers")
 
-def kill(first, last, sendemail):
+def kill(first, last, sendemail, pth):
     data = []
-    with open("killers.csv", mode='r') as f:
+    with open(pth, mode='r') as f:
         reader = csv.reader(f)
         for row in reader:
             data.append(row)
@@ -112,17 +112,17 @@ def kill(first, last, sendemail):
             row[4] = newtargetid
             break
     
-    with open("killers.csv", mode='w', newline='') as f:
+    with open(pth, mode='w', newline='') as f:
         writer = csv.writer(f)
         writer.writerows(data)
         print("Killed and reassigned target successfully.")
 
     if sendemail:
-        emailAssignment(first, last)
+        emailAssignment(first, last, pth)
 
-def emailAllAssignments():
-    with open("killers.csv", mode='r') as f:
+def emailAllAssignments(pth):
+    with open(pth, mode='r') as f:
         reader = csv.reader(f)
         for row in reader:
-            emailAssignment(row[1], row[2])
+            emailAssignment(row[1], row[2], pth)
     print("\nSent all emails!")

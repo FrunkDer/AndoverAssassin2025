@@ -1,23 +1,24 @@
 import woof
 
 '''
-sendall(message)
+sendall(message, pth)
 
-shuffle()
+shuffle(pth)
 
-emailAssignment(first, last)
+emailAssignment(first, last, pth)
 
-emailAllAssignments()
+emailAllAssignments(pth)
 
-kill(first, last, sendemail=Boolean)
+kill(first, last, sendemail=Boolean, pth)
 '''
-# message = '''WE ARE IN THE TOP 10! CONGRATULATIONS!
-# WE WILL NOW BE DOING REVIVALS! For now, breathe a sigh of relief for making it this far. I'm gonna hammer out the rules of how we do revivals with Anny and Char and I'll get back to you guys soon.
-# This means NO MORE KILLING FOR NOW'''
-# woof.sendall(message)
+# message = '''
+# Here is a list of the people trying to get revived: Tori Dahl, Tyler Tran, Aeva Cleare, Oliver Young, Justin Puno, Ashiq Kibria, Gavin Freeman, Sheila Argueta, Julia Song, Wooba Song, Julian Tay, James Gordon, and Papa Paintsil.
+# To kill them, take a picture of them with their right hand touching something. The person who kills the most revives gets a special bonus entering the finals.
+# To reiterate, you all are safe until revivals are over.'''
+# woof.sendall(message, "killers.csv")
 
-#woof.shuffle()
+#woof.shuffle("revivals.csv")
 
-#woof.emailAllAssignments()
+#woof.emailAllAssignments("revivals.csv")
 
 #woof.kill("Xavier", "Moran", sendemail=True)
