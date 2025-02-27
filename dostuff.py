@@ -21,4 +21,4 @@ kill(first, last, sendemail=Boolean, pth)
 
 #woof.emailAllAssignments("revivals.csv")
 
-#woof.kill("Xavier", "Moran", sendemail=True)
+woof.kill("Ashiq", "Kibria", True, "revivals.csv")
