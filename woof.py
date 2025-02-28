@@ -35,7 +35,7 @@ def emailAssignment(first, last, pth):
         reader = csv.reader(f)
         for row in reader:
             if row[1] == first and row[2] == last:
-                #print(f"Found Person {row}")
+                print(f"Found Person {row}")
                 person = row.copy()
             data.append(row.copy())
         if not person:
@@ -44,13 +44,13 @@ def emailAssignment(first, last, pth):
 
     
     targetid = person[4]
-    #print(f"Target id is {targetid}")
+    print(f"Target id is {targetid}")
     target = None
     for row in data:
         #print(f"Row: {row}")
         if row[0] == targetid:
             target = row.copy()
-            #print(f"Target = {target}")
+            print(f"Target = {target}")
             break
     if not target:
         print("target not found\n\n")
