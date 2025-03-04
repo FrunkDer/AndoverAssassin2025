@@ -12,11 +12,11 @@ emailAllAssignments(pth)
 kill(first, last, sendemail=Boolean, pth)
 '''
 # message = '''
-# Clarification: the opening on your container / glass must be equal or larger in area than a commons glass'''
+# Shuffling assignments!'''
 # woof.sendall(message, "killers.csv")
 
 # woof.shuffle("killers.csv")
 
 # woof.emailAllAssignments("killers.csv")
 
-#woof.kill("Maurice", "Ntoro", True, "killers.csv")
+#woof.kill("Evie", "Lagrandeur", True, "killers.csv")
